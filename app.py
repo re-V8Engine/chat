@@ -6,7 +6,8 @@ import redis
 
 app = flask.Flask(__name__)
 app.secret_key = 'asdf'
-red = redis.StrictRedis()
+red = redis.StrictRedis(host='chat-redis')
+
 
 
 def event_stream():
